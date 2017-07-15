@@ -43,7 +43,7 @@ public class JavaFXApplication7 extends Application {
         dropDownMenu.getItems().addAll("Trunk", "CR1", "CR1.7", "CR1.6");
         dropDownMenu.setPromptText("Select Branch to be cleaned");
 //        dropDown.getSelectionModel().selectedItemProperty().addListener((v, oldValue, newValue) -> branchSelector(dropDown));
-        
+        dropDownMenu.setOnAction(e -> System.out.println("Selected Branch: "+ dropDownMenu.getValue()));
         GridPane.setConstraints(dropDownMenu, 1, 0);
         
         Button button = new Button("Enter");
